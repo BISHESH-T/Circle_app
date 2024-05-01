@@ -1,0 +1,198 @@
+<html>
+
+<head>
+  <title>Sample App</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+  <script src="./src/index.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <link rel="stylesheet" src="style.css">
+</head>
+
+<body>
+  <!--This is the main circle wallet interface-->
+  <div class="plux">
+    <div class="main">
+      <h2>Circle Sample Wallet By Sakuta</h2>
+      <br /><br />
+      <div class="row">
+        <div class="label">App Id</div><br />
+        <input id="appId" />
+      </div>
+      <br>
+      <div class="row">
+        <div class="label">User Token</div><br />
+        <input id="userToken">
+      </div>
+      <br>
+      <div class="row">
+        <div class="label">Encryption Key</div><br />
+        <input id="encryptionKey" />
+      </div>
+      <br>
+      <div class="row">
+        <label class="label">Challenge Id</label><br />
+        <input id="challengeId" />
+      </div>
+      <br>
+      <br />
+      <button id="verifyButton">EXECUTE</button>
+    </div>
+  </div>
+
+
+
+  <!--This is the structure interface of the Live crypto prices-->
+  <div class="crypto">
+    <h2>Live Crypto Prices</h2>
+    <div class="container">
+
+      <div id="unit">
+        <div class="logo">
+          <img src="https://cdn.pixabay.com/photo/2021/04/30/16/47/btc-logo-6219386_640.png">
+          <img id="doge" src="https://assets.gadgets360cdn.com/img/crypto/dogecoin-og-logo.png">
+          <img src="https://cdn.pixabay.com/photo/2021/05/24/09/15/ethereum-logo-6278329_1280.png">
+          <img id="ltc"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzRwNZwKfnURr-B0L3j2F0r66Y2sarHOoDfSc86EI6ew&s">
+        </div>
+      </div>
+
+      <div class="coin_price">
+        <div class="btc">
+          <h3>$<span id="bitcoin"></span></h3>
+          <h3>Bitcoin</h3>
+        </div>
+
+        <div class="doge">
+          <h3>$<span id="dogecoin"></span></h3>
+          <h3>Dogecoin</h3>
+        </div>
+
+        <div class="eth">
+          <h3>$<span id="ethereum"></span></h3>
+          <h3>Ethereum</h3>
+        </div>
+
+        <div class="ltc">
+          <h3>$<span id="litecoin"></span></h3>
+          <h3>Litecoin</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+
+<!-- This is the crypto trade interface-->
+  <div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js"
+      async>
+      </script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    
+
+    <style>
+      .main {
+
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        grid-area: 100%;
+
+      }
+
+      .row {
+        display: contents;
+        font-size: large;
+        font-family: sans-serif;
+      }
+
+      .label {
+        min-width: 112px;
+      }
+
+      input {
+        display: flex;
+        padding-top: 0%;
+        min-width: 400px;
+        min-height: 30px;
+        font-size: medium;
+        appearance: none;
+        border: none;
+        background-color: lightgray;
+
+      }
+
+      button {
+        min-width: 400px;
+        min-height: 30px;
+        background-color: #007aff;
+        appearance: none;
+        border: none;
+        color: white;
+
+      }
+
+      button:hover {
+        background-color: #47ffca;
+      }
+
+      .plux {
+        display: inline-block;
+        width: 400px;
+        vertical-align: top;
+        padding-left: 350px;
+      }
+
+      .crypto {
+        display: inline-block;
+        padding: 30px 60px 0px;
+        width: 300px;
+      }
+
+      .container {
+        display: flex;
+        width: 200px;
+      }
+
+      .coin_price {
+        display: grid;
+      }
+
+      img {
+        display: block;
+        height: 100px;
+        width: 100px;
+      }
+
+      #doge {
+        width: 90px;
+        height: 60px;
+      }
+
+      #ltc {
+        height: 65px;
+        width: 85px;
+
+      }
+
+      #unit {
+        display: flex;
+        width: 100px;
+      }
+
+      .logo {
+        display: grid;
+      }
+
+      .tradingview-widget-container {
+        display: flex;
+        padding-top: 30px;
+        justify-content: middle;
+        align-content: middle;
+      }
+    </style>
+</body>
+
+</html>
